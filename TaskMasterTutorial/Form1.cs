@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,18 +25,31 @@ namespace TaskMasterTutorial
 
             foreach(Status s in statuses)
             {
-                cBoxStatus.Items.Add(s.Name);
+                cBoxStatus.Items.Add(s);
             }
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+
+        private void cmdCreateTask_Click(object sender, EventArgs e)
         {
+            if(cBoxStatus.SelectedItem != null && textTask.Text != String.Empty)
+            {
+                var newTask = new Models.Task()
+                {
+                    Name = textTask.Text,
+                    StatusId = (cBoxStatus.SelectedItem as Models.Status).Id,
+                    DueDate = dateTimePicker1.Value
+                };
 
-        }
+                tmDbContext.Taskes.Add(newTask);
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+                tmDbContext.SaveChanges();
 
+
+            } else
+            {
+                MessageBox.Show("Please make sure all data has been entered!");
+            }
         }
     }
 }

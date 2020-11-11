@@ -30,6 +30,7 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.cmdCreateTasks = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cmdDeleteTask = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.cBoxStatus = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textTask = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.cmdCreateTasks.SuspendLayout();
             this.SuspendLayout();
@@ -77,7 +77,15 @@
             this.cmdCreateTasks.TabIndex = 1;
             this.cmdCreateTasks.TabStop = false;
             this.cmdCreateTasks.Text = "Task";
-            this.cmdCreateTasks.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 56);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 15);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Status";
             // 
             // label2
             // 
@@ -96,7 +104,6 @@
             this.label1.Size = new System.Drawing.Size(29, 15);
             this.label1.TabIndex = 7;
             this.label1.Text = "Task";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cmdDeleteTask
             // 
@@ -133,6 +140,7 @@
             this.cmdCreateTask.TabIndex = 3;
             this.cmdCreateTask.Text = "Create";
             this.cmdCreateTask.UseVisualStyleBackColor = true;
+            this.cmdCreateTask.Click += new System.EventHandler(this.cmdCreateTask_Click);
             // 
             // cBoxStatus
             // 
@@ -157,15 +165,6 @@
             this.textTask.Name = "textTask";
             this.textTask.Size = new System.Drawing.Size(269, 23);
             this.textTask.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 56);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 15);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Status";
             // 
             // Form1
             // 
