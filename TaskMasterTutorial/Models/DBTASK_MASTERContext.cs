@@ -29,6 +29,7 @@ namespace TaskMasterTutorial.Models
             OnModelCreatingPartial(modelBuilder);
         }
         public DbSet<Status> Statuses { get; set; }
+        public DbSet<Task> Taskes { get; set; }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
