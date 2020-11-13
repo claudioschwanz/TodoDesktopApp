@@ -113,6 +113,7 @@
             this.cmdDeleteTask.TabIndex = 6;
             this.cmdDeleteTask.Text = "Delete";
             this.cmdDeleteTask.UseVisualStyleBackColor = true;
+            this.cmdDeleteTask.Click += new System.EventHandler(this.cmdDeleteTask_Click);
             // 
             // cmdCancelTask
             // 
@@ -122,6 +123,7 @@
             this.cmdCancelTask.TabIndex = 5;
             this.cmdCancelTask.Text = "Cancel";
             this.cmdCancelTask.UseVisualStyleBackColor = true;
+            this.cmdCancelTask.Click += new System.EventHandler(this.cmdCancelTask_Click);
             // 
             // cmdUpdateTask
             // 
@@ -131,6 +133,7 @@
             this.cmdUpdateTask.TabIndex = 4;
             this.cmdUpdateTask.Text = "Update";
             this.cmdUpdateTask.UseVisualStyleBackColor = true;
+            this.cmdUpdateTask.Click += new System.EventHandler(this.cmdUpdateTask_Click);
             // 
             // cmdCreateTask
             // 
